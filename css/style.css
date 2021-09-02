@@ -17,6 +17,8 @@
     margin: 0 auto;
   }
 
+  /*! Header */
+
 #main-header{
     height: 84px;
     padding: 10px;
@@ -30,4 +32,50 @@
 
 #main-header img{
     height: 64px;
+}
+
+/*! Gallery */
+#album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+  
+#album-container .card {
+    background-color: #2e3a46;
+    padding: 20px;
+    margin: 20px;
+    flex-basis: 190px;
+    text-align: center;
+    min-height: 335px;
+    box-shadow:  2px 2px 10px #000;
+}
+
+/*? card contents*/
+
+#album-container .card img {
+    width: 100%;
+    height: auto;
+}
+
+
+#album-container .card .title {
+    color: #fff;
+    margin: 17px 0;
+}
+
+#album-container .card .author{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+#album-container .card .year {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.text-gray{
+   color: #808080;
 }
