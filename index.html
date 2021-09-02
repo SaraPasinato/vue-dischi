@@ -22,13 +22,13 @@
             </div>
           </header>
           <!-- gallery-->
-          <main id="gallery">
+          <main id="gallery" v-if="albums.length === 10">
             <section id="album-container" class="container">
-              <div class="card">
-                <img src="img/demo.jpg" alt="New Jersey" />
-                <h2 class="title">NEW JERSEY</h2>
-                <address class="author text-gray">Bon Jovi</address>
-                <time datetime="1988" class="year text-gray">1988</time>
+              <div class="card" v-for="album in albums">
+                <img :src="album.poster" alt="New Jersey" />
+                <h2 class="title">{{album.title}}</h2>
+                <address class="author text-gray">{{album.author}}</address>
+                <time datetime="1988" class="year text-gray">{{album.year}}</time>
               </div>
               <!--! end card-->
             </section>
