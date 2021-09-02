@@ -7,8 +7,8 @@
 * 
 * !BONUS:
 ** TODO 1)Ordinare i dischi per anno di uscita.
-* TODO 2)Creare una select con tutti i generi dei dischi. In base a cosa
-* TODO       scegliamo nella select, vedremo i corrispondenti cd. 
+** TODO 2)Creare una select con tutti i generi dei dischi. In base a cosa
+** TODO       scegliamo nella select, vedremo i corrispondenti cd. 
 */
 console.log("HERE", Vue);
 
