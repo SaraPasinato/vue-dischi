@@ -10,34 +10,40 @@
 * TODO 2)Creare una select con tutti i generi dei dischi. In base a cosa
 * TODO       scegliamo nella select, vedremo i corrispondenti cd. 
 */
-console.log("HERE",Vue);
+console.log("HERE", Vue);
 
-Vue.config.devtools=true;
+Vue.config.devtools = true;
 
 
 
 var app = new Vue({
-    el: '#app',
-    data: {
-     albums:[],
-     genres:['pop','rock'],
-     genreSelected:'',
-    },
-    methods:{
-      getDiscs(){
-        axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((res)=>{
-        this.albums=res.data.response;
+  el: '#app',
+  data: {
+    albums: [],
+    genres: ['Pop', 'Rock'],
+    genreSelected: '',
+  },
+  
+  methods: {
+    getDiscs() {
+      axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((res) => {
+        this.albums = res.data.response;
         this.filterByYear();
-        })
-      },
-      filterByYear(){
-        return (this.albums.sort((a,b)=> parseInt(a.year) - parseInt(b.year)));
-        },
+      })
+      //TODO: recuperare i generi
     },
-    created(){
-     this.getDiscs();
+    filterByYear() {
+      return (this.albums.sort((a, b) => parseInt(a.year) - parseInt(b.year)));
     },
-    updated:{
-     
-    }
-  })
+  },
+  created() {
+    this.getDiscs();
+  },
+  computed: {
+    filterAlbums() {
+      return this.albums.filter((album) => {
+        return (album.genre.toLowerCase().includes(this.genreSelected.toLowerCase()));
+      });
+    },
+  }
+})
