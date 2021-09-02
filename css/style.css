@@ -33,7 +33,23 @@
 #main-header img{
     height: 64px;
 }
-
+#contents{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#search-by{
+  width:100%;
+  background-color: #fff;
+  padding: .375rem 2.25rem .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  color: #212529;
+  transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 /*! Gallery */
 #album-container {
     display: flex;

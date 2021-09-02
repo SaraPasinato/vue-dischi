@@ -20,6 +20,8 @@ var app = new Vue({
     el: '#app',
     data: {
      albums:[],
+     genres:['pop','rock'],
+     genreSelected:'',
     },
     methods:{
       getDiscs(){

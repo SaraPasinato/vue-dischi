@@ -17,8 +17,16 @@
     <div id="app">
         <!--  logo + header -->
         <header id="main-header">
-            <div class="container">
+            <div id="contents" class="container">
               <img src="./img/logo.png" alt="logo spotify"/>
+              <div id=filter >
+                        <select id="search-by">
+                            <option value="all">Tutti i generi</option>
+                            <option v-for="genre in genres" :value="genre">
+                                {{ genre }}
+                            </option>
+                        </select>
+                    </div>
             </div>
           </header>
           <!-- gallery-->
