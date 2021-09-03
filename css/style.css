@@ -78,6 +78,7 @@
 #album-container .card .title {
     color: #fff;
     margin: 17px 0;
+    text-transform: uppercase;
 }
 
 #album-container .card .author{
